@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="home1.css">
+	<link rel="stylesheet" type="text/css" href="details.css">
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+	<script type="text/javascript" src = "js/jquery.cookie.js"></script>
+	<script src = "js/home.js"></script>
+	<!-- <script src = "js/drag.js"></script> -->
+	<!-- <script src = "js/limitDrag.js"></script> -->
+	<!-- <script>
+		window.onload = function(){
+			var oDiv = document.getElementById("zoom");
+			var eDiv = document.getElementById("main_left_in");
+			eDiv.onmousemove = function(even){
+				var e = even || window.event;
+				oDiv.style.left = e.clientX  -230  + "px";
+				oDiv.style.top = e.clientY  -200 + "px";
+			}
+		}
+	</script> -->
+</head>
+<body>
+	<div class = "home_footer">
+		<div class = "footer_box">
+			<div class = "footer_left">
+				<ul class = "footer_left_in">
+					<li class = "login"><a title="登录/注册" href="#">登录/注册</a></li>
+					<li class = "shopping"><a href="#">购物袋
+					<font class="num">0</font>件</a></li>
+					<li id = "mine">
+						<a href="#" id = "show">我的走秀</a>
+						<div id = "list">
+							<a href="#">我的订单</a>
+							<a href="#">自动退货</a>
+							<a href="#">我的收藏</a>
+							<a href="#">帮助中心</a>
+							<a href="#">全部吐槽</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class = "logo"></div>
+			<div class = "search">
+				<div class = "search_left">
+					<input type = "text" placeholder="请搜索Alexander&nbsp;McQueen试试" id = "search_left_in"/>
+				</div>
+				<a class = "search_right"></a>
+			</div>
+			<div class = "nav">
+				<ul>
+					<li><a href = "#">首页</a></li>
+					<li><a href = "#">新品</a></li>
+					<li><a href = "#">男士</a></li>
+					<li><a href = "#">女士</a></li>
+					<li><a href = "#">品牌</a></li>
+					<li><a href = "#">发现</a></li>
+					<li><a href = "#">专题</a></li>
+					<li><a href = "#">手机走秀</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class = "gps">
+		<div class = "gps_nav">
+			<ul class = "gps_nav_in">
+				<li><a href = "#"><span class = "bag">包袋</span></a>
+					<div class = "bag_in">
+						<div class = "bag_in_left">
+							<div class = "bag_lady">
+								<p><a href="#">女士包袋&nbsp;:<em>频道精选</em></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a> | <a class="kua" href="#">提挎两用包</a></p>
+								<p><a href="#">化妆包</a> | <a href="#">手拿包</a> | <a href="#">长款钱包</a> | <a href="#">短款钱包</a> | <a href="#">卡包/零钱包</a> | <a href="#">公文包 </a></p>
+							</div>
+							<div class = "bag_man">
+								<p><a href="#">男士包袋&nbsp;:<em>频道精选</em></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a> | <a class="kua" href="#">提挎两用包</a></p>
+								<p><a href="#">化妆包</a> | <a href="#">手拿包</a> | <a href="#">长款钱包</a> | <a href="#">短款钱包</a> | <a href="#">卡包/零钱包</a> | <a href="#">公文包 </a></p>
+							</div>
+							<div class = "bag_action">
+								<p><a href="#"><b>功能箱包&nbsp;:</b></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a></p>
+								</div>
+							<div class = "bag_trip">
+								<p><a href="#"><b>旅行箱包&nbsp;:</b></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a></p>
+							</div>
+							</div>
+						<div class = "bag_in_right">
+							<ul id ="Ll">
+								<h3><a href="#">热门品牌</a></h3>
+								<li><a href="#">Chanel</a></li>
+								<li><a href="#">mashaladi</a></li>
+								<li><a href="#">koko</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+								<li><a href="#">Moschino</a></li>
+								<li><a href="#">Michael</a></li>
+								<li><a href="#">MCM</a></li>
+								<li><a href="#">MCM</a></li>
+							
+							</ul>
+							<ul id ="Lr">
+								<li><a href="#">Chanel</a></li>
+								<li><a href="#">mashaladi</a></li>
+								<li><a href="#">koko</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+								<li><a href="#">Moschino</a></li>
+								<li><a href="#">Michael</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href = "#"><span class = "clothing">服装</span></a>
+					<div class = "clothing_in">
+						<div class = "bag_in_left">
+							<div class = "bag_lady">
+								<p><a href="#">女士包袋&nbsp;:<em>频道精选</em></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a> | <a class="kua" href="#">提挎两用包</a></p>
+								<p><a href="#">化妆包</a> | <a href="#">手拿包</a> | <a href="#">长款钱包</a> | <a href="#">短款钱包</a> | <a href="#">卡包/零钱包</a> | <a href="#">公文包 </a></p>
+							</div>
+							<div class = "bag_man">
+								<p><a href="#">男士包袋&nbsp;:<em>频道精选</em></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a> | <a class="kua" href="#">提挎两用包</a></p>
+								<p><a href="#">化妆包</a> | <a href="#">手拿包</a> | <a href="#">长款钱包</a> | <a href="#">短款钱包</a> | <a href="#">卡包/零钱包</a> | <a href="#">公文包 </a></p>
+							</div>
+							<div class = "bag_action">
+								<p><a href="#"><b>功能箱包&nbsp;:</b></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a></p>
+								</div>
+							<div class = "bag_trip">
+								<p><a href="#"><b>旅行箱包&nbsp;:</b></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a></p>
+							</div>
+							</div>
+						
+						<div class = "bag_in_right">
+							<ul id ="Ll">
+								<h3><a href="#">热门品牌</a></h3>
+								<li><a href="#">Chanel</a></li>
+								<li><a href="#">mashaladi</a></li>
+								<li><a href="#">koko</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+								<li><a href="#">Moschino</a></li>
+								<li><a href="#">Michael</a></li>
+								<li><a href="#">MCM</a></li>
+								<li><a href="#">MCM</a></li>
+							
+							</ul>
+							<ul id ="Lr">
+								<li><a href="#">Chanel</a></li>
+								<li><a href="#">mashaladi</a></li>
+								<li><a href="#">koko</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+								<li><a href="#">Moschino</a></li>
+								<li><a href="#">Michael</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href = "#"><span class = "boot">鞋靴</span></a>
+					<div class = "clothing_in">
+						<div class = "bag_in_left">
+							<div class = "bag_lady">
+								<p><a href="#">女士包袋&nbsp;:<em>频道精选</em></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a> | <a class="kua" href="#">提挎两用包</a></p>
+								<p><a href="#">化妆包</a> | <a href="#">手拿包</a> | <a href="#">长款钱包</a> | <a href="#">短款钱包</a> | <a href="#">卡包/零钱包</a> | <a href="#">公文包 </a></p>
+							</div>
+							<div class = "bag_man">
+								<p><a href="#">男士包袋&nbsp;:<em>频道精选</em></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a> | <a class="kua" href="#">提挎两用包</a></p>
+								<p><a href="#">化妆包</a> | <a href="#">手拿包</a> | <a href="#">长款钱包</a> | <a href="#">短款钱包</a> | <a href="#">卡包/零钱包</a> | <a href="#">公文包 </a></p>
+							</div>
+							<div class = "bag_action">
+								<p><a href="#"><b>功能箱包&nbsp;:</b></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a></p>
+								</div>
+							<div class = "bag_trip">
+								<p><a href="#"><b>旅行箱包&nbsp;:</b></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a></p>
+							</div>
+							</div>
+						
+						<div class = "bag_in_right">
+							<ul id ="Ll">
+								<h3><a href="#">热门品牌</a></h3>
+								<li><a href="#">Chanel</a></li>
+								<li><a href="#">mashaladi</a></li>
+								<li><a href="#">koko</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+								<li><a href="#">Moschino</a></li>
+								<li><a href="#">Michael</a></li>
+								<li><a href="#">MCM</a></li>
+								<li><a href="#">MCM</a></li>
+							
+							</ul>
+							<ul id ="Lr">
+								<li><a href="#">Chanel</a></li>
+								<li><a href="#">mashaladi</a></li>
+								<li><a href="#">koko</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+								<li><a href="#">Moschino</a></li>
+								<li><a href="#">Michael</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href = "#"><span class = "watch">腕表</span></a>
+					<div class = "watch_in">
+						<div class = "bag_in_left">
+							<div class = "bag_lady">
+								<p><a href="#">女士包袋&nbsp;:<em>频道精选</em></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a> | <a class="kua" href="#">提挎两用包</a></p>
+								<p><a href="#">化妆包</a> | <a href="#">手拿包</a> | <a href="#">长款钱包</a> | <a href="#">短款钱包</a> | <a href="#">卡包/零钱包</a> | <a href="#">公文包 </a></p>
+							</div>
+							<div class = "bag_man">
+								<p><a href="#">男士包袋&nbsp;:<em>频道精选</em></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a> | <a class="kua" href="#">提挎两用包</a></p>
+								<p><a href="#">化妆包</a> | <a href="#">手拿包</a> | <a href="#">长款钱包</a> | <a href="#">短款钱包</a> | <a href="#">卡包/零钱包</a> | <a href="#">公文包 </a></p>
+							</div>
+							<div class = "bag_action">
+								<p><a href="#"><b>功能箱包&nbsp;:</b></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a></p>
+								</div>
+							<div class = "bag_trip">
+								<p><a href="#"><b>旅行箱包&nbsp;:</b></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a></p>
+							</div>
+							</div>
+						
+						<div class = "bag_in_right">
+							<ul id ="Ll">
+								<h3><a href="#">热门品牌</a></h3>
+								<li><a href="#">Chanel</a></li>
+								<li><a href="#">mashaladi</a></li>
+								<li><a href="#">koko</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+								<li><a href="#">Moschino</a></li>
+								<li><a href="#">Michael</a></li>
+								<li><a href="#">MCM</a></li>
+								<li><a href="#">MCM</a></li>
+							
+							</ul>
+							<ul id ="Lr">
+								<li><a href="#">Chanel</a></li>
+								<li><a href="#">mashaladi</a></li>
+								<li><a href="#">koko</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+								<li><a href="#">Moschino</a></li>
+								<li><a href="#">Michael</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href = "#"><span class = "acc">配饰</span></a>
+					<div class = "acc_in">
+						<div class = "bag_in_left">
+							<div class = "bag_lady">
+								<p><a href="#">女士包袋&nbsp;:<em>频道精选</em></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a> | <a class="kua" href="#">提挎两用包</a></p>
+								<p><a href="#">化妆包</a> | <a href="#">手拿包</a> | <a href="#">长款钱包</a> | <a href="#">短款钱包</a> | <a href="#">卡包/零钱包</a> | <a href="#">公文包 </a></p>
+							</div>
+							<div class = "bag_man">
+								<p><a href="#">男士包袋&nbsp;:<em>频道精选</em></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a> | <a class="kua" href="#">提挎两用包</a></p>
+								<p><a href="#">化妆包</a> | <a href="#">手拿包</a> | <a href="#">长款钱包</a> | <a href="#">短款钱包</a> | <a href="#">卡包/零钱包</a> | <a href="#">公文包 </a></p>
+							</div>
+							<div class = "bag_action">
+								<p><a href="#"><b>功能箱包&nbsp;:</b></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a></p>
+								</div>
+							<div class = "bag_trip">
+								<p><a href="#"><b>旅行箱包&nbsp;:</b></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a></p>
+							</div>
+							</div>
+						
+						<div class = "bag_in_right">
+							<ul id ="Ll">
+								<h3><a href="#">热门品牌</a></h3>
+								<li><a href="#">Chanel</a></li>
+								<li><a href="#">mashaladi</a></li>
+								<li><a href="#">koko</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+								<li><a href="#">Moschino</a></li>
+								<li><a href="#">Michael</a></li>
+								<li><a href="#">MCM</a></li>
+								<li><a href="#">MCM</a></li>
+							
+							</ul>
+							<ul id ="Lr">
+								<li><a href="#">Chanel</a></li>
+								<li><a href="#">mashaladi</a></li>
+								<li><a href="#">koko</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+								<li><a href="#">Moschino</a></li>
+								<li><a href="#">Michael</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href = "#"><span class = "cosmetics">妆品</span></a>
+					<div class = "cosmetics_in">
+						<div class = "bag_in_left">
+							<div class = "bag_lady">
+								<p><a href="#">女士包袋&nbsp;:<em>频道精选</em></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a> | <a class="kua" href="#">提挎两用包</a></p>
+								<p><a href="#">化妆包</a> | <a href="#">手拿包</a> | <a href="#">长款钱包</a> | <a href="#">短款钱包</a> | <a href="#">卡包/零钱包</a> | <a href="#">公文包 </a></p>
+							</div>
+							<div class = "bag_man">
+								<p><a href="#">男士包袋&nbsp;:<em>频道精选</em></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a> | <a class="kua" href="#">提挎两用包</a></p>
+								<p><a href="#">化妆包</a> | <a href="#">手拿包</a> | <a href="#">长款钱包</a> | <a href="#">短款钱包</a> | <a href="#">卡包/零钱包</a> | <a href="#">公文包 </a></p>
+							</div>
+							<div class = "bag_action">
+								<p><a href="#"><b>功能箱包&nbsp;:</b></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a></p>
+								</div>
+							<div class = "bag_trip">
+								<p><a href="#"><b>旅行箱包&nbsp;:</b></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a></p>
+							</div>
+							</div>
+						
+						<div class = "bag_in_right">
+							<ul id ="Ll">
+								<h3><a href="#">热门品牌</a></h3>
+								<li><a href="#">Chanel</a></li>
+								<li><a href="#">mashaladi</a></li>
+								<li><a href="#">koko</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+								<li><a href="#">Moschino</a></li>
+								<li><a href="#">Michael</a></li>
+								<li><a href="#">MCM</a></li>
+								<li><a href="#">MCM</a></li>
+							
+							</ul>
+							<ul id ="Lr">
+								<li><a href="#">Chanel</a></li>
+								<li><a href="#">mashaladi</a></li>
+								<li><a href="#">koko</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+								<li><a href="#">Moschino</a></li>
+								<li><a href="#">Michael</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href = "#"><span class = "live">生活</span></a>
+					<div class = "live_in">
+						<div class = "bag_in_left">
+							<div class = "bag_lady">
+								<p><a href="#">女士包袋&nbsp;:<em>频道精选</em></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a> | <a class="kua" href="#">提挎两用包</a></p>
+								<p><a href="#">化妆包</a> | <a href="#">手拿包</a> | <a href="#">长款钱包</a> | <a href="#">短款钱包</a> | <a href="#">卡包/零钱包</a> | <a href="#">公文包 </a></p>
+							</div>
+							<div class = "bag_man">
+								<p><a href="#">男士包袋&nbsp;:<em>频道精选</em></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a> | <a class="kua" href="#">提挎两用包</a></p>
+								<p><a href="#">化妆包</a> | <a href="#">手拿包</a> | <a href="#">长款钱包</a> | <a href="#">短款钱包</a> | <a href="#">卡包/零钱包</a> | <a href="#">公文包 </a></p>
+							</div>
+							<div class = "bag_action">
+								<p><a href="#"><b>功能箱包&nbsp;:</b></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a></p>
+								</div>
+							<div class = "bag_trip">
+								<p><a href="#"><b>旅行箱包&nbsp;:</b></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a></p>
+							</div>
+							</div>
+						
+						<div class = "bag_in_right">
+							<ul id ="Ll">
+								<h3><a href="#">热门品牌</a></h3>
+								<li><a href="#">Chanel</a></li>
+								<li><a href="#">mashaladi</a></li>
+								<li><a href="#">koko</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+								<li><a href="#">Moschino</a></li>
+								<li><a href="#">Michael</a></li>
+								<li><a href="#">MCM</a></li>
+								<li><a href="#">MCM</a></li>
+							
+							</ul>
+							<ul id ="Lr">
+								<li><a href="#">Chanel</a></li>
+								<li><a href="#">mashaladi</a></li>
+								<li><a href="#">koko</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+								<li><a href="#">Moschino</a></li>
+								<li><a href="#">Michael</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href = "#"><span class = "baby">婴童</span></a>
+					<div class = "baby_in">
+						<div class = "bag_in_left">
+							<div class = "bag_lady">
+								<p><a href="#">女士包袋&nbsp;:<em>频道精选</em></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a> | <a class="kua" href="#">提挎两用包</a></p>
+								<p><a href="#">化妆包</a> | <a href="#">手拿包</a> | <a href="#">长款钱包</a> | <a href="#">短款钱包</a> | <a href="#">卡包/零钱包</a> | <a href="#">公文包 </a></p>
+							</div>
+							<div class = "bag_man">
+								<p><a href="#">男士包袋&nbsp;:<em>频道精选</em></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a> | <a class="kua" href="#">提挎两用包</a></p>
+								<p><a href="#">化妆包</a> | <a href="#">手拿包</a> | <a href="#">长款钱包</a> | <a href="#">短款钱包</a> | <a href="#">卡包/零钱包</a> | <a href="#">公文包 </a></p>
+							</div>
+							<div class = "bag_action">
+								<p><a href="#"><b>功能箱包&nbsp;:</b></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a></p>
+								</div>
+							<div class = "bag_trip">
+								<p><a href="#"><b>旅行箱包&nbsp;:</b></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a></p>
+							</div>
+							</div>
+						
+						<div class = "bag_in_right">
+							<ul id ="Ll">
+								<h3><a href="#">热门品牌</a></h3>
+								<li><a href="#">Chanel</a></li>
+								<li><a href="#">mashaladi</a></li>
+								<li><a href="#">koko</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+								<li><a href="#">Moschino</a></li>
+								<li><a href="#">Michael</a></li>
+								<li><a href="#">MCM</a></li>
+								<li><a href="#">MCM</a></li>
+							
+							</ul>
+							<ul id ="Lr">
+								<li><a href="#">Chanel</a></li>
+								<li><a href="#">mashaladi</a></li>
+								<li><a href="#">koko</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+								<li><a href="#">Moschino</a></li>
+								<li><a href="#">Michael</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li><a href = "#"><span class = "car">豪车</span></a>
+					<div class = "car_in">
+						<div class = "bag_in_left">
+							<div class = "bag_lady">
+								<p><a href="#">女士包袋&nbsp;:<em>频道精选</em></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a> | <a class="kua" href="#">提挎两用包</a></p>
+								<p><a href="#">化妆包</a> | <a href="#">手拿包</a> | <a href="#">长款钱包</a> | <a href="#">短款钱包</a> | <a href="#">卡包/零钱包</a> | <a href="#">公文包 </a></p>
+							</div>
+							<div class = "bag_man">
+								<p><a href="#">男士包袋&nbsp;:<em>频道精选</em></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a> | <a class="kua" href="#">提挎两用包</a></p>
+								<p><a href="#">化妆包</a> | <a href="#">手拿包</a> | <a href="#">长款钱包</a> | <a href="#">短款钱包</a> | <a href="#">卡包/零钱包</a> | <a href="#">公文包 </a></p>
+							</div>
+							<div class = "bag_action">
+								<p><a href="#"><b>功能箱包&nbsp;:</b></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a></p>
+								</div>
+							<div class = "bag_trip">
+								<p><a href="#"><b>旅行箱包&nbsp;:</b></a></p>
+								<p><a class="shou" href="#">手提包</a> | <a href="#">水桶包</a> | <a href="#">链条包</a> | <a href="#">购物袋</a> | <a href="#">单肩/斜跨包</a></p>
+							</div>
+							</div>
+						
+						<div class = "bag_in_right">
+							<ul id ="Ll">
+								<h3><a href="#">热门品牌</a></h3>
+								<li><a href="#">Chanel</a></li>
+								<li><a href="#">mashaladi</a></li>
+								<li><a href="#">koko</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+								<li><a href="#">Moschino</a></li>
+								<li><a href="#">Michael</a></li>
+								<li><a href="#">MCM</a></li>
+								<li><a href="#">MCM</a></li>
+							
+							</ul>
+							<ul id ="Lr">
+								<li><a href="#">Chanel</a></li>
+								<li><a href="#">mashaladi</a></li>
+								<li><a href="#">koko</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+								<li><a href="#">Moschino</a></li>
+								<li><a href="#">Michael</a></li>
+								<li><a href="#">Nike</a></li>
+								<li><a href="#">ADIDA</a></li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class = "main">
+		<div class = "dh">
+		您的位置：
+			<a href = "首页备份.html">走秀首页</a>
+			>
+			<a href = "#">女包</a>
+			>
+			<a href = "#">肩挎包</a>
+			>
+			<a href = "#">链条包</a>
+			>女士压花链条包
+		</div>
+		<div class = "pro_con">
+			<div class = "con_main">
+				<div class = "main-L">
+					<div class = "main_left">
+						<div id = "main_left_in">
+							<img id = "pic_1" src = "main/g1_402_536.jpg"/>
+							<img id = "pic_2" src = "main/g2_402_536.jpg"/>
+							<img id = "pic_3" src = "main/g3_402_536.jpg"/>
+						</div>
+						<div id = "main_left_bottom">
+							<ul id = "left_bottom_in">
+								<li><img src = "main/g1_66_88.jpg"/><i id = "active"></i></li>
+								<li><img src = "main/g2_66_88.jpg"/><i id = ""></i></li>
+								<li><img src = "main/g3_66_88.jpg"/><i id = ""></i></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class = "main-R">
+					<!-- <div class = "main-R_in">
+						<div class = "R_1">
+							<h3>女士压花链条包<span style = "color:#eb7616">[限时9.5折]</span></h3>
+							<ul>
+								<li>品　　牌：</li>
+								<li><a href = "#">Louis Vuitton</a></li>
+								<li>(路易·威登)</li>
+								<li><a href = "#">已有2838条品牌评论</a></li>
+								<li>商品编号：74347080</li>
+							</ul>
+						</div>
+						<div class = "R_2">
+							<p><span>限时抢购：</span><span>7505</span></p>
+							<p><span>走 秀 价：</span><span>￥7900</span></p>
+							<p><span>发 货 地：</span><b>法国.巴黎</b><b>预计7-14个工作日送达</b><a>查看配送流程<i><img src = "two/pc-FRENCH7-14.jpg"/></i></a></p>
+							<p><span>税   费：</span><span>由海外卖家承担</span><a href = "#">详细说明<em>本商品为海外商品，关税由海外卖家承担，如顾客接海关或物流商通知缴纳税费，请先行按国家规定支付，再凭纳税凭证联系走秀客服找海外卖家报销。</em></a></p>
+						</div>
+						<div class = "R_3">
+							<p><i>颜    色：</i><span>粉色</span></p>
+							<p><i>尺    码：</i><span>F</span><a href="#">尺码指南</a></p>
+							<p><i>数    量：</i><span></span><input type = "text" value = "1"/><span></span>件</p>
+							<p><a>支持分期付款<i><img src = "two/fqbiao.jpg"/><b>订单总金额大于<font style = "color:#ea7514;"></font>元即可选择订单分期付款</b>支付时选择“信用卡分期"-"银联在线支付”，<br>即可分期付款。</i></a>
+								<a title = "商品由Annas Boutique提供"><img src = "two/wlb.jpg"/>由Annas Boutique提供</a>
+								<a><img src = "two/fwb.jpg"/>由走秀网提供售后服务</a></p>
+							<p><a href="#" title="立即购买"></a><a class = "sc_btn" href="#" title="加入购物袋"></a><a href="#"></a></p>
+							<p>电话订购：<b>400-888-4499</b><span>（08:00-24:00）</span></p>
+						</div>
+						<div class = "R_4">
+							<div class = "R_4_L">
+								<p><img src = "two/52226539.jpg" style = "width :90px;height:90px;float: left;"/><span>扫一扫二维码分享给朋友</span></p>
+							</div>
+							<div class = "R_4_R">
+								分享到：
+								<a href = "#" title="分享到新浪"></a>
+								<a href = "#" title="分享到腾讯微博"></a>
+								<a href = "#" title="分享到人人网"></a>
+								<a href = "#" title="分享到开心网"></a>
+								<a href = "#" title="分享到豆瓣"></a>
+							</div>
+						</div>
+					</div> -->
+				</div>
+			</div> 
+			<div id = "Bou_main">
+				<ul>
+					<li><a href = "#">商品信息</a></li>
+					<li><a href = "#evaluate">品牌评论(2839)</a></li>
+					<li><a href = "#">走秀承诺</a></li>
+					<li><a href = "#">服务保障</a></li>
+				</ul>
+				<div class = "Bou_main_R">
+					<span>7505</span>
+					<a href="#"></a>
+				</div>
+			</div>
+			<div class = "Bou_main_Left">
+				<div class = "contents"><h5>商品属性</h5></div>
+				<table>
+					<tr>
+						<td>
+							<b>开袋方式：</b>拉链
+						</td>
+						<td>
+							<b>风格：</b>休闲
+						</td>
+						<td>
+							<b>面料材质：</b>漆面小牛皮
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b>适合性别：</b>女性
+						</td>
+						<td>
+							<b>背拿方式：</b>肩背
+						</td>
+						<td>
+							<b>流行款式：</b>链条包
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b>开袋方式：</b>拉链
+						</td>
+						<td>
+							<b>风格：</b>休闲
+						</td>
+						<td>
+							<b>面料材质：</b>漆面小牛皮
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<b>适合性别：</b>女性
+						</td>
+						<td>
+							<b>背拿方式：</b>肩背
+						</td>
+						<td>
+							<b>流行款式：</b>链条包
+						</td>
+					</tr>
+				</table>
+				<h5>尺码对照</h5>
+				<div><img src = "main/sizeImage_8463.jpg"/></div>
+				<div><img src = "main/ys.jpg"/></div>
+				<div><img src = "main/wx.jpg"/></div>
+				<h5>商品实拍</h5>
+				<div class = "spsp"><h4 style = "color:red;">温馨提示：</h4>
+					<p>走秀网所有商品均为实物拍摄，我们尽最大努力将商品的原貌展示给您，但因拍摄灯光、个人显示器等原因，可能会有一定色差，请以实物为准。</p>
+				</div>
+				<div>
+					<img src = "main/e0.jpg"/>
+					<img src = "main/e1.jpg"/>
+					<img src = "main/e2.jpg"/>
+				</div>
+				<h5>品牌故事</h5>
+				<img src = "main/1171_2_11494297762097.jpg"/>
+				<div class = "evaluate" id="evaluate">
+					<div class = "evaluate_top">
+						<div class = "top_left">
+							<div class = "top_left_l">
+								<h3 style = "font-weight: normal;">品牌满意度</h3>
+								<b>5.0</b>分
+								<i></i>
+							</div>
+							<ul class = "top_left_r">
+								<li><span>品牌喜爱</span><i></i><span>4.9</span></li>
+								<li><span>品牌质量</span><i></i><span>5.0</span></li>
+								<li><span>描述相符</span><i></i><span>5.0</span></li>
+							</ul>
+						</div>
+						<div class = "top_center">
+							<h3 style = "font-weight: normal;">发表评论，送购物礼券</h3>
+							<ol>
+								<li>1.柏****@</li>
+								<li>1.柏****@</li>
+								<li>1.柏****@</li>
+								<li>1.柏****@</li>
+								<li>1.柏****@</li>
+								<li>1.柏****@</li>
+								<li>1.柏****@</li>
+								<li>1.柏****@</li>
+								<li>1.柏****@</li>
+								<li>1.柏****@</li>
+								<li>1.柏****@</li>
+							</ol>
+						</div>
+						<div class = "top_right">
+							<a class = "top_right_publish">发表评论</a>
+							<p>每天100名发表评论用户可获赠现金券<a href="#">评论规则</a></p>
+						</div>
+					</div>
+					<div class = "evaluate_list">
+						<div class = "evaluate_list_top">
+							<ul>
+								<li><a href="#">全部(2839)</a></li>
+								<li><a href="#">满意(2814)</a></li>
+								<li><a href="#">一般(23)</a></li>
+								<li><a href="#">不满意(2)</a></li>
+							</ul>
+							<div class ="list_top_r">
+								<select>
+									<option>品牌全部评论</option>
+									<option>当前商品评论</option>
+								</select>
+								<select>
+									<option>全部商品类型</option>
+									<option>饰品</option>
+									<option>服装服饰</option>
+									<option>妆品</option>
+									<option>箱包皮具</option>
+									<option>鞋类</option>
+								</select>
+							</div>
+						</div>
+						<div class = "evaluate_list_j">
+							<!-- <div class = "evaluate_list_bottom">
+								<div class = "list_bottom_bose"><img src = "main/none.jpg"/><p>x****7</p><a href="#">已购买过此商品</a></div>
+								<div class = "list_bottom_r">
+								<img src = "main/g1_100_100.jpg"/>
+									<div>
+										<p><span>评分：</span><b></b><span>已获赠券</span>颜色：金色</p>
+										<p>尺码：F</p>
+										<p>挺好</p>
+										<p><a href="#">LV&ME字母M手链</a><span>发表于2017-10-09 01:07:19</span></p>
+									</div>
+								</div> 
+							</div>-->
+						</div>
+						<div class = "number">
+							<div class = "number_in">
+								<a>第一页</a>
+								<a>上一页</a>
+								<span>1</span>
+								<a href="#">2</a>
+								<a href="#">3</a>
+								<span>...</span>
+								<a href="#">下一页</a>
+								<a href="#">最后页</a>
+							</div>
+							<a href="#" style="margin-left:120px;text-decoration: none; ">查看品牌全部评论>></a></div>
+					</div>
+				</div>
+			</div>
+			<div class = "Bou_main_Right">
+				<div class = "Bou_main_Right_t">你最近浏览的商品</div>
+				<div class = "Bou_main_Right_top">
+					<!-- <div class = "Bou_main_Right_l">
+						<img src = "main/g1_81_108.jpg"/>
+						<p title="Louis Vuitton">Louis Vuitton</p>
+						<p><a href = "#">女士kleber提挎两用包</a></p>
+					</div> -->
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class = "home_end">
+		<div class = "end_top">
+			<div class = "end_top_in m">
+				<div class = "top_null">
+					<a href = "#" class = "kf" title="在线客服"></a>
+					<p class = "dh"></p>
+					<a href = "#" class = "tc" title="我要吐槽"></a>
+				</div>
+				<dl>
+					<dd><a href = "#">招纳贤士</a></dd>
+					<dd><a href = "#">CEO邮箱</a></dd>
+					<dd><a href = "#">售后服务</a></dd>
+					<dd><a href = "#">常见问题</a></dd>
+					<dd id = "why">
+						<a href = "#">关税说明</a>
+						<div id = "why_in"><p>商品为海外商品,关税由海外卖家承担，如顾客接海关或物流通知缴纳税费,先行按照国家规定支付,再凭纳税凭证联系走秀客服找海外卖家报销.</p></div>
+					</dd>
+					<dd><a href = "#">物流配送</a></dd>
+				</dl>
+				<dl class = "new_us">
+					<dt><span>关注我们</span></dt>
+					<dd>
+						<p>
+							<a class = "us_wx" href = "#">
+								<i><img src = "weixinQr.jpg"/></i>
+							</a>
+							<a class = "us_wb" href = "#"></a>
+							<a class = "us_xj" href = "#"></a>
+							<a class = "us_fb" href = "#"></a>
+						</p>
+					</dd>
+					<dd>
+						<div class = "bottom_in">
+							<form>
+								<input class = "email" type = "text" placeholder="订阅最新时尚资讯邮件..."/></form>
+							<input type = "button" class = "submit">
+							<div class = "email_tip" style = "display: none;"></div>
+						</div>
+					</dd>
+				</dl>
+				<dl class = "top_right">
+					<dt>我们的APP</dt>
+					<dd><a href = "#"></a></dd>
+				</dl>
+			</div>
+		</div>
+		<div class = "end_bottom">
+			<ul>
+				<li><a href = "#">关于走秀</a>|</li>
+				<li><a href = "#">about us</a>|</li>
+				<li><a href = "#">媒体报道</a>|</li>
+				<li><a href = "#">品牌招商</a>|</li>
+				<li><a href = "#">加入走秀</a>|</li>
+				<li><a href = "#">网站地图</a>|</li>
+				<li><a href = "#">联系我们</a>|</li>
+				<li><a href = "#">品牌大全</a>|</li>
+				<li><a href = "#">邮件订阅</a>|</li>
+				<li><a href = "#">WAP站点</a></li>
+			</ul>
+		</div>
+		<div class = "foot_btn">
+			<a href = ""></a>
+			<a href = ""></a>
+			<a href = ""></a>
+		</div>
+		<p class ="copyright">
+		Copyright © 2008-2017 
+			<a href="http://www.xiu.com ">Xiu.com</a>
+			深圳走秀网络科技有限公司 版权所有 . 
+			<a href="http://www.miibeian.gov.cn/ ">粤ICP备07502993号</a>
+            <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030402000804">
+                <img src="wab.png" style="margin: -4px 0px 0 0;" width="16" height="16">
+                粤公网安备 44030402000804号
+            </a>
+        </p>
+        <div class = "des_div">
+        	<a href = "#"><img src = "c_01.jpg"/></a>
+        	<a href = "#"><img src = "c_04.jpg"/></a>
+        	<a href = "#"><img src = "c_08.jpg"/></a>
+        	<a href = "#"><img src = "c_09.jpg"/></a>
+        	<a href = "#"><img src = "c_11.jpg"/></a>
+        </div>
+	</div>
+</body>
+</html>

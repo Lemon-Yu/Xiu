@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	*{margin:0;padding:0;}
+	#header{
+		height:60px;
+	}
+	#header_in{
+		height:60px;
+		width:1200px;
+		margin:0 auto;
+	}
+	#header .logo{
+        float: left;
+        width: 194px;
+        height: 30px;
+        position: relative;
+        margin: 15px auto;
+	}
+	#login_body{
+	    position: relative;
+        width: 100%;
+        height: 700px;
+        border-top:1px solid #e5e5e5;
+        background:url(login_bg.jpg) center no-repeat #f7f2ec;
+	}
+	#login_body #login{
+		width:421px;
+		height:560px;
+		border:1px solid #d8d8d8;
+		box-shadow: 0 0 20px #c8c8c8;
+		position: absolute;
+		margin-top:70px;
+		margin-left:780px;
+		background:#fff;
+	}
+	div #login_note{
+		width:420px;
+		height:50px;
+		background:pink;
+	}
+	div #login_note #login_note_left{
+		width:210px;
+		height:50px;
+		background:#f7f7f9;
+		float: left;
+	}
+	div #login_note #login_note_left #text_login{
+		text-align: center;
+		line-height: 50px;
+		font-size: 16px;
+		color:#464646;
+		font-weight: bold;
+		border-bottom: 2px solid black;
+	}
+	div #login_note #login_note_right{
+		width:210px;
+		height:50px;
+		background:#f7f7f9;
+		float: left;
+	}
+	div #login_note #login_note_right #pass_login{
+		text-align: center;
+		line-height: 50px;
+		font-size: 16px;
+		color:#afafaf;
+	}
+	div #login_note #login_note_right #pass_login:hover{
+		text-align: center;
+		line-height: 50px;
+		font-size: 16px;
+		color:#464646;
+		font-weight: bold;
+		border-bottom: 2px solid black;
+	}
+	div #login_content{
+		width:420px;
+		height:510px;
+		background: #ffffff;
+	}
+	#username_span{
+		width:302px;
+		height:36px;
+		line-height: 72px;
+		display: block;
+		font-size: 12px;
+		color:#d2041f;
+		display: none;
+	}
+	#username_span a{
+		width:12px;
+		height:12px;
+		display:inline-block;
+		margin-left:60px;
+		background:url(login_sprite.png) -200px 0;
+	}
+	div #login_content #tag_top{
+		width:300px;
+		height:34px;
+		margin-top:25px;
+		margin-left:60px;
+		border:1px solid #d8d8d8;
+		color: #afafaf;
+		text-indent: 9px;
+		font-size: 12px;
+		
+	}
+	div #login_content #fieldset{
+		border:1px solid #7fbfe7;
+		width:293px;
+		height:41px;
+		display: none;
+		margin-top:18px;
+		margin-left:60px;
+		padding-left:7px;
+		font-size: 12px;
+		color:#afafaf;
+		
+	}
+	
+	div #login_content #tag_top_in{
+		border:0;
+		margin-top:-5px;
+		outline: 0;
+	}
+	#auth_box #auto_text{
+		margin: 12px 0 -8px;
+        color: #afafaf;
+        font-size: 12px;
+        margin-left:57px;
+	}
+	#auth_box #auth #auth_top{
+		width:125px;
+		height:32px;
+		margin-left:57px;
+		margin-top:20px;
+		border:1px solid #d8d8d8;
+		color: #afafaf;
+		text-indent: 9px;
+		font-size: 12px;
+	}
+	#auth_box #auth #auto_in{
+		border:1px solid #7fbfe7;
+		width:118px;
+		height:34px;
+		font-size: 12px;
+		color:#afafaf;
+		margin-left:57px;
+		padding-left:7px;
+		margin-top:20px;
+		display: none;
+	}
+	#auth_box #auth #auth_top_in{
+		border:0;
+		margin-top:-5px;
+		outline: 0;
+		width:110px;
+	}
+	#auth_box #auth #antoname_span{
+		width:302px;
+		height:12px;
+		margin-top:14px;
+		display: block;
+		font-size: 12px;
+		color:#d2041f;
+		display: none;
+		float: left;
+	}
+	#auth_box #auth #antoname_span a{
+		width:12px;
+		height:12px;
+		display:inline-block;
+		margin-left:60px;
+		background:url(login_sprite.png) -200px 0;
+		
+	}
+	#auth_box #auth #code_random{
+		height:33px;
+		width:80px;
+		position: relative;
+		cursor: pointer;
+		background:white;
+		display: inline-block;
+		line-height: 33px;
+		text-align: center;
+	}
+	#auth_box #auth #change{
+		font-size: 12px;
+		width:35px;
+		height:33px;
+		cursor: pointer;
+	}
+	#auth_box #auth #change:hover{
+		text-decoration: underline;
+	}
+	#usercode_span{
+		width:302px;
+		height:12px;
+		display: block;
+		font-size: 12px;
+		color:#d2041f;
+		display: none;
+	}
+	#usercode_span a{
+		width:12px;
+		height:12px;
+		display:inline-block;
+		margin-left:60px;
+		background:url(login_sprite.png) -200px 0;
+	}
+	div #login_content #auth_code{
+		width:186px;
+		height:34px;
+		margin-top:20px;
+		margin-left:60px;
+		border:1px solid #d8d8d8;
+		color: #afafaf;
+		text-indent: 9px;
+		float: left;
+		font-size: 12px;
+	}
+	#fieldset_bottom{
+		border:1px solid #7fbfe7;
+		width:179px;
+		height:41px;
+		display: none;
+		margin-top:13px;
+		margin-left:60px;
+		padding-left:7px;
+		font-size: 12px;
+		color:#afafaf;
+		float:left;
+	}
+	div #login_content #fieldset_bottom_in{
+		border:0;
+		margin-top:-5px;
+		outline: 0;
+	}
+	div #login_content #get_code{
+		width:100px;
+		height:34px;
+		border:1px solid #cccccc;
+		font-size: 12px;
+		float: left;
+		margin-top:20px;
+		line-height:36px;
+		text-align: center;
+		background: #f7f7f9;
+		margin-left: 13px;
+	}
+	#login_b{
+		height:120px;
+		width:421px;
+		margin-top:83px;
+	}
+	div #login_content #get_pass{
+		font-size: 12px;
+		color:#464646;
+		text-decoration: none;
+		display:block;
+		margin-left:312px;
+	}
+	div #login_content #get_pass:hover{
+		text-decoration: underline;
+	}
+	div #login_content #register{
+		width:300px;
+		height:40px;
+		background:#d2041f;
+		font-size: 14px;
+		border:0;
+		border-radius: 25px;
+		margin-top:26px;
+		margin-left:60px;
+		color:#fff;
+		letter-spacing: 17px;
+		cursor: pointer;
+		text-align: center;
+		text-indent: 10px;
+	}
+	div #wire{
+		border-top:1px solid #e7e7e7;
+		width:300px; 
+		margin-left: 60px;
+		margin-top:35px;
+		position: relative;
+	}
+	div #wire #teamwork{
+		width:120px;
+		height:30px;
+		background:white;
+		left:90px;
+		top:-16px;
+		font-size: 12px;
+		line-height: 30px;
+		text-align: center;
+		position: absolute;
+	}
+	#api-login{
+		width:270px;
+		height:30px;
+		float:left;
+		margin-left:75px;
+		margin-top:22px;
+	}
+	#api-login li{
+		list-style: none;
+		float:left;
+	}
+	#api-login li:nth-of-type(1){
+		width:30px;
+		height:30px;
+		background:url(login_sprite.png) 0 0;
+	}
+	#api-login li:nth-of-type(2){
+		margin-left: 30px;
+		width:30px;
+		height:30px;
+		background:url(login_sprite.png) -30px 0;
+	}
+	#api-login li:nth-of-type(3){
+		margin-left: 30px;
+		width:30px;
+		height:30px;
+		background:url(login_sprite.png) -60px 0;
+	}
+	#api-login li:nth-of-type(4){
+		margin-left: 30px;
+		width:30px;
+		height:30px;
+		background:url(login_sprite.png) -90px 0;
+	}
+	#api-login li:nth-of-type(5){
+		margin-left: 30px;
+		width:30px;
+		height:30px;
+		background:url(login_sprite.png) -120px 0;
+	}
+	#api-login li a{
+		display: inline-block;
+		width:30px;
+		height:30px;
+	}
+	#code{
+		width:60px;
+		height:60px;
+		background:url(login_sprite.png) 0 -400px;
+		position: absolute;
+		bottom:0;
+		right:0;
+	}
+	#code_text{
+		width:84px;
+		height:25px;
+		background:url(login_sprite.png) 0 -360px;
+		position: absolute;
+		bottom:12px;
+		right:56px;
+	}
+	#login_footer{
+		height:100px;
+		margin-top:10px;
+	}
+	#footer_list{
+		text-align:center;
+		padding-top:15px;
+		width:1200px;
+		height:18px;
+		overflow: hidden;
+		margin: 0 auto;
+	}
+	#footer_list a{
+		width:48px;
+		height:14px;
+		font-size: 12px;
+		display:inline-block;
+		color:#464646;
+		text-decoration: none;
+		font-weight:100;
+	}
+	#footer_list a:hover{
+		text-decoration:underline;
+	}
+	#footer_list b{
+		width:14px;
+		height:12px;
+		display:inline-block;
+		line-height: 18px;
+		overflow: hidden;
+	}
+	#footer_copyright{
+		text-align: center;
+		padding-top:10px;
+		font-size: 12px;
+		color:#999;
+	}
+	#footer_copyright a{
+		text-decoration: none;
+		color:#999;
+	}
+	#footer_copyright a:hover{
+		text-decoration:underline;
+	}
+	</style>
+	<script type="text/javascript">
+	window.onload = function(){
+		var tag_top = document.getElementById("tag_top");
+		var fieldset = document.getElementById("fieldset");
+		var tag_top_in = document.getElementById("tag_top_in");
+		var auth_code = document.getElementById("auth_code");
+		tag_top_in.onmouseover = function(){
+			this.focus();
+		}
+		fieldset_bottom_in.onmouseover = function(){
+			this.focus();
+		}
+		auth_top_in.onmouseover = function(){
+			this.focus();
+		}
+		tag_top.onfocus = function(){
+			this.style.display = "none";
+			fieldset.style.display = "block";
+			username_span.style.display = "block";
+		}
+		auth_code.onfocus = function(){
+			this.style.display = "none";
+			fieldset_bottom.style.display = "block";
+			usercode_span.style.display = "block";
+		}
+		auth_top.onfocus = function(){
+			this.style.display = "none";
+			auto_in.style.display = "block";
+			antoname_span.style.display = "block";
+		}
+		auth_top_in.onblur = function(){
+			auto_in.style.display = "none";
+			auth_top.style.display="block";
+		}
+		tag_top_in.onblur = function(){
+			fieldset.style.display = "none";
+			tag_top.style.display="block";
+			var tagTop = /^[0-9a-zA-Z]\w{5,17}$/;
+            var eInput = tagTop.test(tag_top_in.value);
+            if(eInput != true) {
+	            username_span.innerHTML = "对不起，您密码格式输入有误！";
+	        }
+	        else{
+	            username_span.innerHTML = " ";
+	            tag_top.value = tag_top_in.value;
+	        }
+		}
+		fieldset_bottom_in.onblur = function(){
+			fieldset_bottom.style.display = "none";
+			auth_code.style.display="block";
+		}
+		var oA = document.getElementById("change");
+		var code_random = document.getElementById("code_random");
+		oA.onclick = function(){
+		code_random.style.color = "rgba(" + parseInt(Math.random() * 255) + ","+
+            parseInt(Math.random() * 255) + ","+ parseInt(Math.random() * 255) +",1)";
+        code_random.innerHTML = rannum() + rannum() + rannum() + rannum();
+		}
+	}
+	 function rannum(){
+        var n = parseInt(Math.random() * 3);
+        switch(n){
+            case 0:
+                return parseInt(Math.random()*10);
+                break;
+            case 1:
+                return String.fromCharCode(65 + parseInt(Math.random() * 25));
+                break;
+            case 2:
+                return String.fromCharCode(97 + parseInt(Math.random() * 25));
+
+        }
+    }
+
+        
+	</script>
+</head>
+<body>
+	<div id = "header">
+		<div id = "header_in">
+		<a href="http://www.xiu.com">
+		<img src = "logo_mini.png" class = "logo"/>
+		</a>
+		</div>
+	</div>
+	<div id = "login_body">
+		<div id = "login">
+		    <div id = "login_note">
+		        <div id = "login_note_left">
+		            <div id = "text_login"><a>短信登录</a></div></div>
+		        <div id = "login_note_right">
+		            <div id = "pass_login"><a>密码登录</a></div></div>    
+		    </div>
+		    <div id = "login_content">
+		        <span id = "username_span"><a></a>&nbsp;&nbsp;请输入有效的手机号!</span>
+		        <input type = "text" value="手机号码" id = "tag_top"/>
+		        <fieldset id = "fieldset"><legend>手机号码</legend>
+					<label><input id="tag_top_in" type="text" ></label>
+		        </fieldset>
+		        <div id = "auth_box">
+		            <p id = "auto_text">
+						新手机号将认为接受
+						<a href="http://www.xiu.com/help/xieyi.shtml" target="_blank">《走秀网用户协议》</a>
+						并自动注册账号
+					</p>
+		        	<div id = "auth">
+		        		<input type = "text" value = "验证码" id = "auth_top"/>
+		        		<fieldset id = "auto_in"><legend>验证码</legend>
+						<label><input id="auth_top_in" type="text" ></label>
+		        		</fieldset>
+		        		<span id = "antoname_span"><a></a>&nbsp;&nbsp;请输入您收到的验证码!</span>
+		        	
+		        	<p id="code_random" title="请填入正确验证码">
+		        	</p>
+		        	<a id = "change">换一换</a>
+		        	</div>
+		        </div>
+		        <span id = "usercode_span"><a></a>&nbsp;&nbsp;请输入您收到的验证码!</span>
+		        <input type = "text" value="短信验证码" id = "auth_code"/>
+		        <fieldset id = "fieldset_bottom"><legend>短信验证码</legend>
+					<label><input id="fieldset_bottom_in" type="text" ></label>
+		        </fieldset>
+		        <div id = "get_code">获取验证码</div>
+		        <div id = "login_b">
+			        <a id = "get_pass" href = "#">找回密码</a>
+			        <input type = "button" value=" 登录 " id = "register" />
+			    
+			        <div id = "wire">
+			            <div id = "teamwork">合作网站账号登录</div>
+			        </div>
+			        </div>
+			            <ul id = "api-login">
+					        <li><a href="http://union.xiu.com/tencent/redirectNew.action?url=http://search.xiu.com/s?kw=%E8%A1%8C%E6%9D%8E%E7%AE%B1&amp;p=4&amp;src=ori " class="api-qq" title="QQ账号"></a></li>
+					        <li><a href="http://union.xiu.com/wechat/redirectNew.action?url=http://www.xiu.com/?from=12973174&amp;utm_content=12973174&amp;utm_campaign=gjc_xiu_&amp;utm_source=baidu&amp;utm_medium=cpc " class="api-wechat" title="微信账号"></a></li>
+					        <li><a href="http://union.xiu.com/sina/redirectNew.action?url=http://www.xiu.com/?from=12973174&amp;utm_content=12973174&amp;utm_campaign=gjc_xiu_&amp;utm_source=baidu&amp;utm_medium=cpc " class="api-sina" title="新浪微博"></a></li>
+					        <li><a href="http://union.xiu.com/alipay/redirectNew.action?type=login&amp;url=http://www.xiu.com/?from=12973174&amp;utm_content=12973174&amp;utm_campaign=gjc_xiu_&amp;utm_source=baidu&amp;utm_medium=cpc" class="api-alipay" title="支付宝账号"></a></li>
+					        <li><a href="http://union.xiu.com/pingAn/redirectNew.action?url=http://www.xiu.com/?from=12973174&amp;utm_content=12973174&amp;utm_campaign=gjc_xiu_&amp;utm_source=baidu&amp;utm_medium=cpc" class="api-pingan" title="平安万里通"></a></li>
+			        </ul>
+		        <div id = "code"></div>
+		        <div id = "code_text"></div>
+		    </div>
+		</div>
+	</div>
+	<div id = "login_footer">
+		<div id = "footer_list">
+			<a onclick="XIU.Window.ctraceClick('version=b|lev1=yj|lev2=yj|lev3=yj','abtest');" target="_blank" href="http://www.xiu.com/about/aboutus.shtml">关于走秀</a>
+			<b>|</b>
+			<a onclick="XIU.Window.ctraceClick('version=b|lev1=yj|lev2=yj|lev3=yj','abtest');" target="_blank" href="http://www.xiu.com/about/media.shtml">媒体报道</a>
+			<b>|</b>
+			<a onclick="XIU.Window.ctraceClick('version=b|lev1=yj|lev2=yj|lev3=yj','abtest');" target="_blank" href="http://www.xiu.com/about/cooperate.shtml">品牌招商</a>
+			<b>|</b>
+			<a onclick="XIU.Window.ctraceClick('version=b|lev1=yj|lev2=yj|lev3=yj','abtest');" target="_blank" href="http://www.xiu.com/about/job.shtml">加入走秀</a>
+			<b>|</b>
+			<a onclick="XIU.Window.ctraceClick('version=b|lev1=yj|lev2=yj|lev3=yj','abtest');" target="_blank" href="http://www.xiu.com/about/link.shtml">友情链接</a>
+			<b>|</b>
+			<a onclick="XIU.Window.ctraceClick('version=b|lev1=yj|lev2=yj|lev3=yj','abtest');" target="_blank" href="http://www.xiu.com/about/contact.shtml">联系我们</a>
+			<b>|</b>
+			<a onclick="XIU.Window.ctraceClick('version=b|lev1=yj|lev2=yj|lev3=yj','abtest');" target="_blank" href="http://www.xiu.com/help/index.shtml">帮助中心</a>
+			<b>|</b>
+			<a onclick="XIU.Window.ctraceClick('version=b|lev1=yj|lev2=yj|lev3=yj','abtest');" target="_blank" href="http://www.xiu.com/about/classifymap.shtml">网站地图</a>
+		</div>
+		<div id="footer_copyright">
+			Copyright © 2008-2017
+			<a href="http://www.xiu.com">Xiu.com</a>
+			版权所有 . 粤ICP备07502993号
+			<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030402000804" target="_blank">
+			<img src="http://www.xiustatic.com/static/img/footer/wab.png" width="14" height="14">
+			粤公网安备 44030402000804号
+			</a>
+		</div>
+	</div>
+</body>
+</html>
